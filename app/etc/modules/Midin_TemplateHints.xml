@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Midin_TemplateHints>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Midin_TemplateHints>
+	</modules>
+</config>

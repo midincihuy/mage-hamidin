@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <midin_templatehints_tab module="midin_templatehints" translate="label">
+            <label>Midin Template Hints</label>
+            <sort_order>5000000</sort_order>
+        </midin_templatehints_tab>
+    </tabs>
+	<sections>
+		<midin_templatehints translate="label" module="midin_templatehints">
+			<label>Midin Template Hints</label>
+			<tab>midin_templatehints_tab</tab>
+			<sort_order>9999</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<midin_templatehints translate="label">
+					<label>Configuration</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enable translate="label">
+							<label for="">Enable</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Enable This Extension</comment>
+						</enable>
+					</fields>
+				</midin_templatehints>
+			</groups>
+		</midin_templatehints>
+	</sections>
+</config>

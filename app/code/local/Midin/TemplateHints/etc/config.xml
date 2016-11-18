@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Midin_TemplateHints>
+			<version>0.0.1</version>
+		</Midin_TemplateHints>
+	</modules>
+
+	<global>
+		<models>
+			<midin_templatehints>
+				<class>Midin_TemplateHints_Model</class>
+			</midin_templatehints>
+		</models>
+		<helpers>
+			<midin_templatehints>
+				<class>Midin_TemplateHints_Helper</class>
+			</midin_templatehints>
+		</helpers>
+		<events>
+			<core_block_abstract_to_html_after>
+				<observers>
+					<midin_templatehints>
+						<type>singleton</type>
+						<class>midin_templatehints/observer</class>
+						<method>core_block_abstract_to_html_after</method>
+					</midin_templatehints>
+				</observers>
+			</core_block_abstract_to_html_after>
+		</events>
+	</global>
+</config>
