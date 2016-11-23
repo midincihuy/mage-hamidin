@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Icube_Autocancel>
+            <version>0.1.2</version>
+        </Icube_Autocancel>
+    </modules>
+    
+    <frontend>
+        <routers>
+            <autocancel>
+                <use>standard</use>
+                <args>
+                    <module>Icube_Autocancel</module>
+                    <frontName>autocancel</frontName>
+                </args>
+            </autocancel>
+        </routers>      
+    </frontend>
+
+    <global>
+        <blocks>
+            <icube_autocancel>
+                <class>Icube_Autocancel_Block</class>
+            </icube_autocancel>
+            <icube_autocancel_adminhtml>
+                <class>Icube_Autocancel_Block_Adminhtml</class>
+            </icube_autocancel_adminhtml>
+        </blocks>
+        <models>
+            <autocancel>
+                <class>Icube_Autocancel_Model</class>
+                <resourceModel>autocancel_mysql4</resourceModel>
+            </autocancel>
+            <autocancel_mysql4>
+                <class>Icube_Autocancel_Model_Mysql4</class>
+                <entities>
+                    <autocancel>
+                        <table>icube_autocancel</table>
+                    </autocancel>
+                    <orders>
+                        <table>icube_autocancel_orders</table>
+                    </orders> 
+                </entities>
+            </autocancel_mysql4>
+        </models>
+        <helpers>
+            <icube_autocancel>
+                <class>Icube_Autocancel_Helper</class>
+            </icube_autocancel>
+        </helpers>
+
+        <resources>
+            <icube_autocancel_setup>
+                <setup>
+                    <module>Icube_Autocancel</module>
+                </setup>
+            </icube_autocancel_setup>
+        </resources>
+
+        <events>
+            <sales_order_save_after> 
+                <observers>
+                    <autocancel_observer>
+                        <class>Icube_Autocancel_Model_Observer</class>
+                        <method>orderSaveAfter</method>
+                    </autocancel_observer>
+                </observers>
+            </sales_order_save_after>    
+        </events>
+
+    </global>
+    
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Icube_Autocancel before="Mage_Adminhtml">Icube_Autocancel_Adminhtml</Icube_Autocancel>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <crontab>
+        <jobs>
+            <autocancel_orders>
+                <schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>autocancel/observer::autocancelOrders</model></run>
+            </autocancel_orders>
+        </jobs>
+    </crontab>
+
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Midin_RefreshCache>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Midin_RefreshCache>
+	</modules>
+</config>

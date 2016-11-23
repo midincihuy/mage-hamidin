@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Midin_RefreshCache>
+			<version>0.0.1</version>
+		</Midin_RefreshCache>
+	</modules>
+
+	<global>
+		<models>
+			<midin_refreshcache>
+				<class>Midin_RefreshCache_Model</class>
+			</midin_refreshcache>
+		</models>
+		<events>
+			<catalog_product_prepare_save>
+				<observers>
+					<midin_refreshcache>
+						<type>singleton</type>
+						<class>midin_refreshcache/observer</class>
+						<method>productPrepareSave</method>
+					</midin_refreshcache>
+				</observers>
+			</catalog_product_prepare_save>
+		</events>
+	</global>
+
+	<crontab>
+		<jobs>
+			<midin_refreshcache>
+				<schedule><cron_expr>* * * * *</cron_expr></schedule>
+				<run><model>midin_refreshcache/observer::refreshCache</model></run>
+			</midin_refreshcache>
+		</jobs>
+	</crontab>
+</config>

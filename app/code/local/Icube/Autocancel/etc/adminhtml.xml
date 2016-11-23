@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <menu>
+        <icube translat="title">
+            <title>Icube</title>
+            <sort_order>80</sort_order>
+            <children>
+                <icube_autocancel translate="title" module="icube_autocancel">
+                    <sort_order>10</sort_order>
+                    <title>Auto Cancel</title>
+                    <action>adminhtml/autocancel/</action>
+                </icube_autocancel>
+            </children>
+        </icube>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+            <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <icube>
+                        <children>  
+                            <icube_autocancel module="icube_autocancel">
+                                <title>Auto Cancel</title>
+                                <sort_order>100</sort_order>
+                            </icube_autocancel>
+                        </children>
+                    </icube>
+                    <icube>
+                        <children>
+                            <icube_autocancel translate="title">
+                                <title>Auto Cancel</title>
+                                <sort_order>50</sort_order>
+                            </icube_autocancel>
+                        </children>
+                    </icube>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

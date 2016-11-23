@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Icube_Autocancel>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+            	<Icube_Cancellationreasons/>
+            </depends>
+        </Icube_Autocancel>
+     </modules>
+</config>
