@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Midin_Base>
+			<version>0.0.1</version>
+		</Midin_Base>
+	</modules>
+	<global>
+		<blocks>
+			<sales>
+				<rewrite>
+					<order_info>Midin_Base_Block_Sales_Order_Info</order_info>
+				</rewrite>
+			</sales>
+		</blocks>
+	</global>
+</config>
