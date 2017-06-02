@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_create_index>
+        <reference name="data">
+            <block type="sourcechannel/adminhtml_sales_order_create_sourcechannel" name="sourcechannel_sales_order_create_sourcechannel" as="sourcechannel_create" after="shipping_method" template="sourcechannel/sales/order/create/sourcechannel.phtml" />
+        </reference>
+    </adminhtml_sales_order_create_index>
+    <adminhtml_sales_order_create_load_block_data>
+        <reference name="data">
+            <block type="sourcechannel/adminhtml_sales_order_create_sourcechannel" name="sourcechannel_sales_order_create_sourcechannel" as="sourcechannel_create" after="shipping_method" template="sourcechannel/sales/order/create/sourcechannel.phtml" />
+        </reference>
+    </adminhtml_sales_order_create_load_block_data>
+</layout>

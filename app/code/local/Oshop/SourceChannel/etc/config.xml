@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Oshop_SourceChannel>
+            <version>0.0.1</version>
+        </Oshop_SourceChannel>
+    </modules>
+
+    <global>
+        <resources>
+            <sourcechannel_setup>
+                <setup>
+                    <module>Oshop_SourceChannel</module>
+                </setup>
+            </sourcechannel_setup>
+        </resources>
+
+        <models>
+            <sourcechannel>
+                <class>Oshop_SourceChannel_Model</class>
+                <resourceModel>sourcechannel_resource</resourceModel>
+            </sourcechannel>
+            <sourcechannel_resource>
+                <class>Oshop_SourceChannel_Model_Resource</class>
+                <entities>
+                    <sourcechannel_table>
+                        <table>sourcechannel_table</table>
+                    </sourcechannel_table>
+                </entities>
+            </sourcechannel_resource>
+        </models>
+
+        <helpers>
+            <sourcechannel>
+                <class>Oshop_SourceChannel_Helper</class>
+            </sourcechannel>
+        </helpers>
+
+        <blocks>
+            <sourcechannel>
+                <class>Oshop_SourceChannel_Block</class>
+            </sourcechannel>
+        </blocks>
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <sourcechannel>
+                    <file>sourcechannel/sourcechannel.xml</file>
+                </sourcechannel>
+            </updates>
+        </layout>
+    </adminhtml>
+
+</config>
