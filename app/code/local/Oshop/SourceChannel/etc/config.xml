@@ -26,6 +26,9 @@
                     <sourcechannel_table>
                         <table>sourcechannel_table</table>
                     </sourcechannel_table>
+                    <channelorder_table>
+                        <table>oshop_channel_order</table>
+                    </channelorder_table>
                 </entities>
             </sourcechannel_resource>
         </models>
